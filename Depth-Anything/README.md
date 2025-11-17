@@ -1,5 +1,7 @@
 # Depth-Anything based training / inference guide
 Real Time 3-D Pose Estimation for Mice with Only 2-D Annotation Via Data Synthesis
+## Pseudo Labels from a pretrained Depth Anything model
+Download the pretrained models from https://huggingface.co/spaces/LiheYoung/Depth-Anything/tree/main/checkpoints_metric_depth <br />Use LoadFine-tunedModel.ipynb to remove the metric bin module as the pretrained model has not been fine-tuned on a mouse dataset.
 ## Fine-tune a Depth Anything model with automatically synthetic data
 Go to metric_depth for instructions. The name of the dataset is "PyMouse_HQ". You might need to modified the train/test input suffix (e.g. PyMouse_HQ_train_files_with_gt_orbbec_trans.txt means synthetic data, corresponding to real data captured by orbbec depth camera, with style-transfer; remove "_orbbec_trans" before training) for switching between synthetic data & real data. Our fine-tuned models can be downloaded from the links in metric_depth/checkpoints/links_to_models.txt
 ## Process the fine-tuned models
