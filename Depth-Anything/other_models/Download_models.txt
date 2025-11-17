@@ -1,0 +1,2 @@
+YOLO-11 model: https://ucsandiego2.box.com/s/2cvosqdjs7zybwqsja9exjq2itfbmer1
+Random Frest model: https://ucsandiego2.box.com/s/ij1fux4wvi9q014b016r1yj8fahtkdfe
