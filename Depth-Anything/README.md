@@ -5,6 +5,6 @@ Go to metric_depth for instructions. The name of the dataset is "PyMouse_HQ". Yo
 ## Process the fine-tuned models
 Use LoadFine-tunedModel.ipynb
 ## Offline Demo
-Download the data from the link in assets/PyMouseLifter_demo.txt and run run_PyMouseLifter_offline_demo.py Use VisualizeOfflineDemo.ipynb for visualization.
+Download the data from the link in assets/PyMouseLifter_demo.txt and run run_PyMouseLifter_offline_demo.py <br />Use VisualizeOfflineDemo.ipynb for visualization.
 ## Replicate the delay & FPS estimation with flashing LEDs
 Use run_PyMouseLifter_online_classification_LED.py with devices like LabJack U3-LV, 2 LEDs with appropriate switching circuit, and a high-speed camera.
