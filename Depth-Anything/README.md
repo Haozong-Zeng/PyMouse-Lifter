@@ -9,4 +9,4 @@ Use LoadFine-tunedModel.ipynb
 ## Offline Demo
 Download the data from the link in assets/PyMouseLifter_demo.txt and run run_PyMouseLifter_offline_demo.py <br />Use VisualizeOfflineDemo.ipynb for visualization.
 ## Replicate the delay & FPS estimation with flashing LEDs
-Use run_PyMouseLifter_online_classification_LED.py with devices like LabJack U3-LV, 2 LEDs with appropriate switching circuit, and a high-speed camera.
+Use run_PyMouseLifter_online_classification_LED.py with devices like LabJack U3-LV, 2 LEDs with appropriate switching circuit, and a high-speed camera. Go to PyMouse-Lifter/LED_delay_measurement for analysis.
