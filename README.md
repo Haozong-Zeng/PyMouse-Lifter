@@ -1,5 +1,6 @@
 # PyMouse-Lifter
 This repository contains the codes and documents of the "PyMouse-Lifter: Real Time 3-D Pose Estimation for Mice with Only 2-D Annotation Via Data Synthesis" project in Dr. Tim Murphy's Lab at UBC.
+![alt text](https://www.biorxiv.org/content/biorxiv/early/2025/08/03/2025.08.02.668290/F1.large.jpg?width=800&height=600&carousel=1)
 ## Blender
 This folder contains the Blender projects for automated data synthesis. To run the Python scripts in Blender, please install the dependencies in Blender's own Python environment.
 ## Depth Anything
