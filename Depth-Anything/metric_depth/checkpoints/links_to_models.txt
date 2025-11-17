@@ -1,0 +1,2 @@
+Full size model with metric bin modules: https://ucsandiego2.box.com/s/z4pr3kundgt0jr8hj0v1prk0lt8ydkah
+Lightened model for faster realtime processing: https://ucsandiego2.box.com/s/vr6tagor9fqahjh91xu1qs6h5ujqm39b
