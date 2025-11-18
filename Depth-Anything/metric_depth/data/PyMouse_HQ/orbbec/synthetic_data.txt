@@ -1,0 +1,1 @@
+synthetic data that simulate the openfield images captured by an orbbec depth camera: https://ucsandiego2.box.com/s/4nfawb00hxwa0fhlvdewjkz7gu4nnia4
