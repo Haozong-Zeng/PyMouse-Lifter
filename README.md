@@ -4,7 +4,7 @@ This repository contains the codes and documents of the "PyMouse-Lifter: Real Ti
 ## Blender
 This folder contains the Blender projects for automated data synthesis. To run the Python scripts in Blender, please install the dependencies in Blender's own Python environment.
 ## Depth Anything
-This folder contains everything you need: getting pseudo labels, fine-tuning models, and doing real-time behavior classification. Synthetic & real datasets are being compressed and uploaded; coming soon.
+This folder contains everything you need: getting pseudo labels, fine-tuning models, and doing real-time behavior classification. Synthetic & real datasets are being compressed and uploaded; download links can be found in metric_depth/data/PyMouse_HQ; more data coming.
 ## PyMouse Lifter Classification
 This folder contains the codes and data to validate the behavioral classifiers mentioned in the paper.
 ## LED delay measurement
