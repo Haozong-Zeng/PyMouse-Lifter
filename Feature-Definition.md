@@ -35,15 +35,9 @@ To remove camera-dependent motion and inter-frame yaw, all 3-D coordinates are a
    The tail base is translated to the origin:
 tail_base → (0, 0, 0)
 
-markdown
-复制代码
-
 2. **Rotation about the Z-axis**  
 The vector
 tail_base → lumbar_spine
-
-yaml
-复制代码
 is rotated such that it aligns with the global **+Y axis**.
 
 After alignment:
@@ -132,10 +126,6 @@ Captures localized appearance changes associated with fine movements (e.g., groo
 
 **Feature naming convention:**
 {k}_3d_x, {k}_3d_y, {k}_3d_z
-
-yaml
-复制代码
-
 where  
 `k ∈ {nose, head, left_ear, right_ear, neck, spine_center, lumbar_spine, tail_base}`
 
@@ -174,9 +164,6 @@ For each segment *i*, the angle is computed in the aligned XY plane:
 **Feature names:**
 segment_angles_0 … segment_angles_4
 
-yaml
-复制代码
-
 ---
 
 ### 4.4 Spine Angular Velocity
@@ -192,9 +179,6 @@ yaml
 **Feature names:**
 segment_ang_vel_0 … segment_ang_vel_4
 
-yaml
-复制代码
-
 ---
 
 ### 4.5 Spine Angular Acceleration
@@ -209,9 +193,6 @@ yaml
 
 **Feature names:**
 segment_ang_acc_0 … segment_ang_acc_4
-
-yaml
-复制代码
 
 ---
 
@@ -251,8 +232,6 @@ For each body point (head, tail_base):
 head_vel_3d_x/y/z
 tailbase_vel_3d_x/y/z
 
-yaml
-复制代码
 
 **Units:** mm · s⁻¹
 
@@ -281,9 +260,6 @@ yaml
 **Feature names:**
 head_speed
 tail_speed
-
-yaml
-复制代码
 
 ---
 
