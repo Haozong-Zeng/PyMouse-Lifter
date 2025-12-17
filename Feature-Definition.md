@@ -290,15 +290,3 @@ As a result, all exported feature tables contain **only finite values**.
 | **Total** | **74** |
 
 ---
-
-## 8. Reference Implementation
-
-All features defined in this document are implemented in Python and publicly available at:
-
-https://github.com/Haozong-Zeng/PyMouse-Lifter
-
-The implementation follows **exactly** the definitions given here, without post-hoc modification.
-
----
-
-*End of feature specification.*
