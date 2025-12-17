@@ -73,20 +73,16 @@ To capture instantaneous image-space intensity changes as a **hardware-agnostic 
 
 ### 3.1 Whole-frame Pixel Change
 
-**Feature name:** `pixel_change`  
-**Dimensionality:** 1 scalar  
+**Feature name:** pixel_change
+**Dimensionality:** 1 scalar
 **Units:** normalized intensity change (unitless)
 
 **Definition:**
 
-\[
-\text{pixel\_change}
-=
-\frac{\mathbb{E}\left[(I_t - I_{t-1})^2\right]}
-{\mathbb{E}[I_t]}
-\]
+pixel_change =
+mean( (I_t - I_{t-1})^2 ) / mean( I_t )
 
-where \( I_t \) denotes the grayscale image at frame *t*.
+where I_t denotes the grayscale image at frame t.
 
 **Interpretation:**
 - Sensitive to sudden body motion
@@ -152,11 +148,11 @@ The body axis is divided into **5 ordered spine segments**:
 
 ### 4.3 Spine Segment Angles
 
-For each segment *i*, the angle is computed in the aligned XY plane:
+For each spine segment i, the angle is computed in the aligned XY plane as:
 
-\[
-\theta_i = \mathrm{atan2}(\Delta y, \Delta x)
-\]
+theta_i = atan2( delta_y , delta_x )
+
+where delta_x and delta_y are the differences between the segment endpoints.
 
 **Dimensionality:** 5 scalars  
 **Units:** radians  
@@ -168,10 +164,8 @@ segment_angles_0 … segment_angles_4
 
 ### 4.4 Spine Angular Velocity
 
-\[
-\dot{\theta}_i =
-\frac{\theta_i(t) - \theta_i(t-1)}{\Delta t}
-\]
+ang_vel_i =
+( theta_i(t) - theta_i(t-1) ) / delta_t
 
 **Dimensionality:** 5 scalars  
 **Units:** radians · s⁻¹  
@@ -183,10 +177,8 @@ segment_ang_vel_0 … segment_ang_vel_4
 
 ### 4.5 Spine Angular Acceleration
 
-\[
-\ddot{\theta}_i =
-\frac{\dot{\theta}_i(t) - \dot{\theta}_i(t-1)}{\Delta t}
-\]
+ang_acc_i =
+( ang_vel_i(t) - ang_vel_i(t-1) ) / delta_t
 
 **Dimensionality:** 5 scalars  
 **Units:** radians · s⁻²  
@@ -201,12 +193,16 @@ segment_ang_acc_0 … segment_ang_acc_4
 **Feature name:** `bend_ratio`  
 **Dimensionality:** 1 scalar  
 
-\[
-\text{bend\_ratio}
-=
-\frac{\sum_{i=1}^{5} \lVert p_{i+1} - p_i \rVert}
-{\lVert p_{\text{nose}} - p_{\text{tail\_base}} \rVert}
-\]
+bend_ratio =
+( ||p_head - p_nose||
++ ||p_neck - p_head||
++ ||p_spine_center - p_neck||
++ ||p_lumbar_spine - p_spine_center||
++ ||p_tail_base - p_lumbar_spine|| )
+/
+||p_nose - p_tail_base||
+
+where ||a - b|| denotes the Euclidean distance between two 3-D points.
 
 **Interpretation:**
 - ≈ 1 indicates a straight body
@@ -220,10 +216,8 @@ segment_ang_acc_0 … segment_ang_acc_4
 
 For each body point (head, tail_base):
 
-\[
-\vec{v}(t) =
-\frac{\vec{p}(t) - \vec{p}(t-1)}{\Delta t}
-\]
+velocity(t) =
+( position(t) - position(t-1) ) / delta_t
 
 **Dimensionality:**  
 2 points × 3 axes = **6 scalars**
@@ -239,10 +233,8 @@ tailbase_vel_3d_x/y/z
 
 ### 5.2 Acceleration Vectors
 
-\[
-\vec{a}(t) =
-\frac{\vec{v}(t) - \vec{v}(t-1)}{\Delta t}
-\]
+acceleration(t) =
+( velocity(t) - velocity(t-1) ) / delta_t
 
 **Dimensionality:** 6 scalars  
 **Units:** mm · s⁻²
@@ -251,9 +243,7 @@ tailbase_vel_3d_x/y/z
 
 ### 5.3 Speed (Scalar Magnitude)
 
-\[
-\text{speed} = \lVert \vec{v} \rVert
-\]
+speed = sqrt( vx^2 + vy^2 + vz^2 )
 
 **Dimensionality:** 2 scalars  
 
