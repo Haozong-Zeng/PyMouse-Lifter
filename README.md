@@ -6,7 +6,7 @@ This folder contains the Blender projects for automated data synthesis. To run t
 ## Depth Anything
 This folder contains everything you need: getting pseudo labels, fine-tuning models, and doing real-time behavior classification. Synthetic & real datasets are being compressed and uploaded; download links can be found in metric_depth/data/PyMouse_HQ; more data coming.
 ## PyMouse Lifter Classification
-This folder contains the codes and data to validate the behavioral classifiers mentioned in the paper.
+This folder contains the codes and data to validate the behavioral classifiers mentioned in the paper. Details of the features used for classification can be found in Feature-Definition.md
 ## LED delay measurement
 This folder contains the codes and data to validate the delay & FPS estimation with flashing LEDs. To replicate the experiment, go to Depth Anything folder.
 
