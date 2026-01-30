@@ -321,10 +321,10 @@ if __name__ == '__main__':
     depth_anything.half().to(DEVICE)
     depth_anything.eval()
 
-    yolo_path = './YOLO_models/yolo11m-orbbec-pose-real.pt'
+    yolo_path = './other_models/yolo11m-orbbec-pose-real.pt'
     yolo_model = YOLO(yolo_path)
     
-    rf_path = './YOLO_models/rf_model_realtime_demo.pkl'
+    rf_path = './other_models/rf_model_realtime_demo.pkl'
     rf_model = joblib.load(rf_path)
 
     transform = Compose([
