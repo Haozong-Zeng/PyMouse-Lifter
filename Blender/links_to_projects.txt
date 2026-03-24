@@ -1,1 +1,4 @@
 Here's the links to Blender projects
+
+moseq dual mice demo: use this blender file: https://ucsandiego2.box.com/s/gawii54wdu1bmr43q6cvddonog37tz61
+with data: https://ucsandiego2.box.com/s/kmx1gw5oispflnfy7v51z4x5vvys91bl
